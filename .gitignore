@@ -1,3 +1,7 @@
+.idea
+xiao-spring-in-action.iml
+target
+
 # Compiled class file
 *.class
 
