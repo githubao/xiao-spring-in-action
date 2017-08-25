@@ -13,7 +13,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  */
 
 public class KnightApp {
-    public static void main1(String[] args) {
+    public static void main(String[] args) {
         ApplicationContext ctx = new ClassPathXmlApplicationContext("META-INF/spring/knight.xml");
 
         Knight knight = ctx.getBean(Knight.class);
@@ -21,7 +21,7 @@ public class KnightApp {
         knight.embarkOnQuest();
     }
 
-    public static void main(String[] args) {
+    public static void main2(String[] args) {
         ApplicationContext ctx = new AnnotationConfigApplicationContext(KnightConfig.class);
 
         Knight knight = ctx.getBean(Knight.class);

@@ -10,11 +10,11 @@ import java.io.PrintStream;
  * @date: 2017/8/25 17:29
  */
 
-public class DeafultWQuest implements Quest {
+public class DefaultWQuest implements Quest {
 
     private PrintStream stream;
 
-    public DeafultWQuest(PrintStream stream) {
+    public DefaultWQuest(PrintStream stream) {
         this.stream = stream;
     }
 

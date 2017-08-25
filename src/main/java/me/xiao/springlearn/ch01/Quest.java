@@ -10,4 +10,8 @@ package me.xiao.springlearn.ch01;
 
 public interface Quest {
     void embark();
+
+    default void beforeEmbark(){}
+
+    default void afterEmbark(){}
 }

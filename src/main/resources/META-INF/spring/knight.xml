@@ -1,14 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/aop
+            http://www.springframework.org/schema/aop/spring-aop-3.2.xsd">
+
+    <aop:aspectj-autoproxy/>
 
     <bean id="knight" class="me.xiao.springlearn.ch01.BraveKnight">
         <constructor-arg ref="quest"/>
     </bean>
 
-    <bean id="quest" class="me.xiao.springlearn.ch01.DeafultWQuest">
+    <bean id="quest1" class="me.xiao.springlearn.ch01.DefaultWQuest">
         <constructor-arg value="#{T(System).out}"/>
     </bean>
+
+    <bean id="quest" class="me.xiao.springlearn.ch01.AnotherQuest">
+    </bean>
+
+    <aop:config>
+        <aop:aspect ref="quest">
+            <aop:pointcut id="embark" expression="execution(* *.embarkOnQuest(..))"/>
+            <aop:before method="beforeEmbark" pointcut-ref="embark"/>
+            <aop:after method="afterEmbark" pointcut-ref="embark"/>
+        </aop:aspect>
+    </aop:config>
 
 </beans>

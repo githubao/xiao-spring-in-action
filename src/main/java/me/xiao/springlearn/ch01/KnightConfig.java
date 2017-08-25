@@ -20,7 +20,7 @@ public class KnightConfig {
 
     @Bean
     public Quest quest() {
-        return new DeafultWQuest(System.out);
+        return new DefaultWQuest(System.out);
     }
 
 
