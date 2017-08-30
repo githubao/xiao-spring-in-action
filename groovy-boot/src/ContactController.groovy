@@ -11,17 +11,17 @@
 @Controller
 @RequestMapping("/")
 class ContactController {
-    @AutoWared
+    @Autowired
     ContactRepository contactRepository
 
-    @RequestMapping(method=RequestType.GET)
+    @RequestMapping(method=RequestMethod.GET)
     String home(Map<String,Object> model){
         List<Contact> contacts = contactRepository.findAll()
         model.putAll([contacts:contacts])
         "home"
     }
 
-    @RequestMapping(method=RequestType.POST)
+    @RequestMapping(method=RequestMethod.POST)
     String submit(Contact contact){
         contactRepository.save(contact)
         "redirect:/"

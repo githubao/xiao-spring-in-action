@@ -7,4 +7,7 @@
  */
 
 class Contact {
+    long id
+    String userName
+    String phoneNumber
 }
