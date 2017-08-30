@@ -1,8 +1,10 @@
 .gradle
-*/.gradle
+
+*.iml
+
+gradle-boot/build
 
 .idea
-xiao-spring-in-action.iml
 target
 
 # Compiled class file
