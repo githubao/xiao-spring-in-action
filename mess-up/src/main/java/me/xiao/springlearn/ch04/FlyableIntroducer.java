@@ -2,7 +2,6 @@ package me.xiao.springlearn.ch04;
 
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.DeclareParents;
-import org.springframework.beans.factory.annotation.Autowired;
 
 /**
  * 可以飞行的切面

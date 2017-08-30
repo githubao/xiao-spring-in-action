@@ -1,7 +1,6 @@
 package me.xiao.springlearn.ch05.web;
 
 import me.xiao.springlearn.ch05.User;
-import org.springframework.stereotype.Repository;
 
 import java.util.List;
 

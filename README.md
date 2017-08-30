@@ -1,2 +1,14 @@
 # xiao-spring-in-action
-&lt;spring in action> src code
+\<spring in action> src code
+
+
+"D:\win\dev\spring-1.5.6.RELEASE\bin\spring.bat" run hi.groovy
+
+@RestController
+class Hi{
+    @RequestMapping("/")
+    String hi(){
+        "Hi!"
+    }
+}
+
