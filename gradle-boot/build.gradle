@@ -42,5 +42,6 @@ dependencies {
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-web'
     compile group: 'org.thymeleaf', name: 'thymeleaf-spring4'
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-jdbc'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-actuator'
     compile group: 'com.h2database', name: 'h2'
 }

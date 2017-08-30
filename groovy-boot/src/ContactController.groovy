@@ -7,6 +7,7 @@
  */
 
 @Grab("thymeleaf-spring4")
+@Grab("spring-boot-starter-actuator")
 
 @Controller
 @RequestMapping("/")
@@ -14,15 +15,15 @@ class ContactController {
     @Autowired
     ContactRepository contactRepository
 
-    @RequestMapping(method=RequestMethod.GET)
-    String home(Map<String,Object> model){
+    @RequestMapping(method = RequestMethod.GET)
+    String home(Map<String, Object> model) {
         List<Contact> contacts = contactRepository.findAll()
-        model.putAll([contacts:contacts])
+        model.putAll([contacts: contacts])
         "home"
     }
 
-    @RequestMapping(method=RequestMethod.POST)
-    String submit(Contact contact){
+    @RequestMapping(method = RequestMethod.POST)
+    String submit(Contact contact) {
         contactRepository.save(contact)
         "redirect:/"
     }

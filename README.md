@@ -12,3 +12,17 @@ class Hi{
     }
 }
 
+
+GET /autoconfig
+GET /beans
+GET /configprops
+GET /dump : 线程和堆栈的信息
+GET /env
+GET /env/{name}
+GET /health
+GET /info
+GET /metrics: 应用的请求的响应次数等
+GET /metrics/{name}
+GET /trace: 应用的元数据
+POST /shutdown: 关闭应用
+
