@@ -1,11 +1,11 @@
 //package me.xiao.springlearn.ch04;
 //
 ///**
-// * TODO 使用纯切面的实现
+// * TODO description
 // *
 // * @author pacman
 // * @version 1.0
-// * @date: 2017/8/30 14:14
+// * @date: 2017/8/30 14:48
 // */
 //
 //public aspect CriticAspect {
@@ -13,8 +13,8 @@
 //
 //    pointcut performance() : execution(* perform(..));
 //
-//    afterReturning() : performance(){
-//
-//        }
+//    pointcut afterReturning() : performance(){
+//        System.out.println();
+//    }
 //
 //}
